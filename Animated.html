@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <link rel="stylesheet" href="Animated.css" type="text/css" media="all" />
+    <script src="https://kit.fontawesome.com/2c0e277225.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="flex">
+    <h2>Animated Menu Bar in <br> HTML,CSS and Javascript</h2>
+    <div class="nav flex" id="nav">
+        <div class="navContent flex">
+            <ul>
+                <li><i class="fab fa-facebook-f"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <li><i class="fab fa-google-plus-g"></i></li>
+                <li><i class="fab fa-twitter"></i></li>
+                <li><i class="fab fa-whatsapp"></i></li>
+            </ul>    
+        </div>
+        <button class="navIcon" id="btn">
+            <div class="navLine"></div>
+            <div class="navLine"></div>
+            <div class="navLine"></div>
+        </button>
+    </div>
+    
+    
+    <script type="text/javascript" charset="utf-8">
+    
+        const toggle = document.getElementById('btn');
+        const nav = document.getElementById('nav');
+        
+        toggle.addEventListener('click',()=>{
+            nav.classList.toggle('active');
+        });
+          
+    </script>
+</body>
+
+</html>

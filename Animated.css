@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: #fff;
+}
+.flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    min-height: 100vh;
+}
+.nav{
+    width: 50px;
+    height: 40px;
+    background: #B40B0B;
+    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+    transition: width 0.4s linear;
+    border-radius: 5px; 
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 1px 8px 8px, rgba(0, 0, 0, 0.07) 1px 16px 16px;
+    
+}
+h2{
+    position: absolute;
+    top: 40%;
+    color: rgba(0, 0, 0, 0.11);
+    text-align: center;
+    text-transform: uppercase;
+    
+}
+.nav.active{
+    width: 280px;
+    transition: width 0.4s linear;
+}
+.nav .navIcon{
+    position: relative;
+    width: 50px;
+    height: 40px;
+    text-align: center;
+    flex-direction: column;
+    padding: 7px 10px;
+    background: transparent;
+    outline: none;
+    border: none;
+    transition: transform 0.6s linear;
+}
+.nav.active .navIcon{
+    position: relative;
+    top: 5px;
+    transform: rotateY(180deg);
+    right: 0;
+    transition: transform 0.5s linear;
+}
+.nav .navIcon .navLine{
+    width: 28px;
+    height: 2px;
+    background: #fff;
+    margin: 5px auto;
+    /*transition: transform 0.4s linear;*/ 
+}
+/*.nav.active .navIcon{
+    
+    transition: transform 0.5s linear;
+}*/
+.nav.active .navIcon .navLine:nth-child(3){
+    display: none;
+}
+.nav.active .navIcon .navLine.navLine:nth-child(2){
+    transform: skewY(40deg) rotateY(45deg);
+    /*transition: transform 0.5s linear;*/
+} 
+.nav.active .navIcon .navLine.navLine:nth-child(1) {
+    position: absolute;
+    transform: skewY(-40deg) rotateY(45deg);
+   /* transition: transform 0.5s;*/
+}
+.nav.active .navContent{
+    position: relative;
+    width: 280px;
+    height: 40px;
+    left: 0px;
+    font-size: 1.2em;
+}
+.nav .navContent ul{
+    display: none;
+}
+.nav.active .navContent ul{
+    display: flex;
+    list-style: none;
+    text-transform: uppercase;
+}
+.nav.active .navContent ul li{
+    margin: auto 8px;
+}
